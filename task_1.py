@@ -15,7 +15,8 @@ def divide(x, y):
    else:
         return "Cannot divide by zero."
 
-
+def expon(x, y):
+   return x ** y
 
 
 # Task 1: Implement a function for Exponentiation operation, similar to the existing functions above.
