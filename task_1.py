@@ -15,10 +15,14 @@ def divide(x, y):
    else:
         return "Cannot divide by zero."
 
+
+
+
 def exponentiate(x,y):
     return x**y
 
 keep_running = True
+
 
 def read_code():
     s = input("What operation do you want to do (+,-,*,/,^):")
