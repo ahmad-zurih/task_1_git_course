@@ -58,7 +58,9 @@ def exponentiate(x,y):
 # Task 2: Create an interactive user input for the calculator, allowing the user to pick an operation and input numbers.
 
 x = input("pick a number")
-y = input("pick a exponent)def add(x, y):
+y = input("pick a exponent")
+
+def add(x, y):
     return x + y
 
 def subtract(x, y):
