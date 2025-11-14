@@ -15,6 +15,9 @@ def divide(x, y):
    else:
         return "Cannot divide by zero."
 
+def exponential(x, y):
+    return x ** y  # x raised to the power of y
+
 
 
 # Task 1: Implement a function for Exponentiation operation, similar to the existing functions above.
@@ -23,30 +26,46 @@ def exponentiation(x,y):
 
 
 # Task 2: Create an interactive user input for the calculator, allowing the user to pick an operation and input numbers.
-print("Select operation:")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
-print("5.Exponentiation")
-choice = input("Enter choice(1/2/3/4/5):")
-num1 = input("Enter the first number")
-num2 = input("Enter the second number")
-while(True):
- if choice == '1':
-    print(num1 + num2) 
- elif choice == '2':
-  print(num1 - num2)
- elif choice == '3':
-   print(num1 * num2)
- elif choice == '4':
-   print(num1/num2)
- elif choice == '5':
-   print(exponentiation(num1,num2))
 
-else : 
-   print("Invalid input")      
+# Task 2: Interactive user input
+def calculator():
+    print("Select operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Exponent")
 
+    choice = input("Enter choice (1/2/3/4/5): ")
+
+    # Validate choice
+    if choice not in ["1", "2", "3", "4", "5"]:
+        print("Invalid choice.")
+        return
+
+    # Get numbers
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+    except ValueError:
+        print("Invalid input. Please enter numeric values.")
+        return
+
+    # Perform calculation
+    if choice == "1":
+        print("Result:", add(num1, num2))
+    elif choice == "2":
+        print("Result:", subtract(num1, num2))
+    elif choice == "3":
+        print("Result:", multiply(num1, num2))
+    elif choice == "4":
+        print("Result:", divide(num1, num2))
+    elif choice == "5":
+        print("Result:", exponent(num1, num2))
+
+
+# Run the calculator
+calculator()
 
 # Task 3: Add a new file to the repo with other code of your choice
 
