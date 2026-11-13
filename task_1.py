@@ -19,7 +19,8 @@ def divide(x, y):
 
 # Task 1: Implement a function for Exponentiation operation, similar to the existing functions above.
 def exponentiation(x,y):
-    pass
+    return x ** y
+# solution by Michael, copied from Henrique
 
 
 # Task 2: Create an interactive user input for the calculator, allowing the user to pick an operation and input numbers.
